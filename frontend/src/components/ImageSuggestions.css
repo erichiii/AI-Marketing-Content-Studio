@@ -20,13 +20,13 @@
 }
 
 .prompt-card:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  border-color: #14b8a6;
+  box-shadow: 0 4px 8px rgba(20, 184, 166, 0.2);
 }
 
 .prompt-card.selected {
-  border-color: #667eea;
-  background-color: #f7fafc;
+  border-color: #14b8a6;
+  background-color: #f0fdfa;
 }
 
 .prompt-header {
@@ -38,7 +38,7 @@
 
 .prompt-number {
   font-weight: 700;
-  color: #667eea;
+  color: #14b8a6;
   font-size: 1.1rem;
 }
 
@@ -77,13 +77,13 @@
   background-color: #f7fafc;
   padding: 0.75rem;
   border-radius: 6px;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid #14b8a6;
 }
 
 body.dark-mode .prompt-text {
   background-color: #0f172a;
   color: #e2e8f0;
-  border-left-color: #8b5cf6;
+  border-left-color: #14b8a6;
 }
 
 .prompt-meta {
@@ -113,25 +113,25 @@ body.dark-mode .prompt-text {
 }
 
 .element-tag {
-  background-color: #e0e7ff;
-  color: #4338ca;
+  background-color: #ccfbf1;
+  color: #115e59;
   padding: 0.4rem 0.8rem;
   border-radius: 16px;
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid #c7d2fe;
+  border: 1px solid #5eead4;
 }
 
 body.dark-mode .element-tag {
-  background-color: #312e81;
-  color: #c7d2fe;
-  border-color: #4338ca;
+  background-color: #134e4a;
+  color: #99f6e4;
+  border-color: #0f766e;
 }
 
 .copy-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #667eea;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
   border: none;
   border-radius: 6px;
@@ -141,7 +141,7 @@ body.dark-mode .element-tag {
 }
 
 .copy-button:hover {
-  background-color: #5568d3;
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
 }
 
 .usage-note {

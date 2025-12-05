@@ -24,13 +24,13 @@
 }
 
 .variation-card:hover {
-  border-color: #667eea;
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+  border-color: #14b8a6;
+  box-shadow: 0 4px 8px rgba(20, 184, 166, 0.2);
 }
 
 .variation-card.selected {
-  border-color: #667eea;
-  background-color: #f7fafc;
+  border-color: #14b8a6;
+  background-color: #f0fdfa;
 }
 
 .variation-header {
@@ -42,7 +42,7 @@
 
 .variation-number {
   font-weight: 700;
-  color: #667eea;
+  color: #14b8a6;
   font-size: 1.1rem;
 }
 
@@ -97,7 +97,7 @@
 }
 
 .copy-field .cta {
-  color: #667eea;
+  color: #f97316;
   font-weight: 600;
 }
 
@@ -130,15 +130,15 @@
 .copy-button {
   margin-top: 1rem;
   padding: 0.5rem 1rem;
-  background-color: #667eea;
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: background-color 0.2s;
+  transition: all 0.2s;
 }
 
 .copy-button:hover {
-  background-color: #5568d3;
+  background: linear-gradient(135deg, #14b8a6 0%, #2dd4bf 100%);
 }

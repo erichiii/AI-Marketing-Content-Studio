@@ -5,7 +5,7 @@
 }
 
 .app-header {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
   color: white;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -60,7 +60,7 @@ body.dark-mode {
 }
 
 body.dark-mode .app-header {
-  background: linear-gradient(135deg, #4c1d95 0%, #5b21b6 100%);
+  background: linear-gradient(135deg, #115e59 0%, #0f766e 100%);
 }
 
 body.dark-mode .app-main {
@@ -86,7 +86,7 @@ body.dark-mode .form-group textarea {
 body.dark-mode .form-group input:focus,
 body.dark-mode .form-group select:focus,
 body.dark-mode .form-group textarea:focus {
-  border-color: #8b5cf6;
+  border-color: #14b8a6;
 }
 
 body.dark-mode .variation-card,
@@ -97,14 +97,14 @@ body.dark-mode .prompt-card {
 
 body.dark-mode .variation-card:hover,
 body.dark-mode .prompt-card:hover {
-  border-color: #8b5cf6;
+  border-color: #14b8a6;
   background-color: #334155;
 }
 
 body.dark-mode .variation-card.selected,
 body.dark-mode .prompt-card.selected {
   background-color: #334155;
-  border-color: #a78bfa;
+  border-color: #5eead4;
 }
 
 body.dark-mode .app-footer {
@@ -222,7 +222,7 @@ body.dark-mode .app-footer {
 
 .load-btn {
   width: 100%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);
   color: white;
   border: none;
   padding: 0.75rem;
@@ -248,7 +248,7 @@ body.dark-mode .saved-campaign-card {
 }
 
 body.dark-mode .saved-campaign-card:hover {
-  border-color: #8b5cf6;
+  border-color: #14b8a6;
 }
 
 body.dark-mode .saved-campaign-header h3 {
@@ -374,8 +374,8 @@ body.dark-mode .results-header h2 {
 
 body.dark-mode .meta-badge {
   background-color: transparent;
-  border-color: #8b5cf6;
-  color: #c4b5fd;
+  border-color: #14b8a6;
+  color: #5eead4;
 }
 
 body.dark-mode .form-card h2,
@@ -427,13 +427,13 @@ body.dark-mode .prompt-number {
 }
 
 body.dark-mode .copy-button {
-  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
   border: none;
 }
 
 body.dark-mode .copy-button:hover {
-  background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
 }
 
 body.dark-mode .usage-note {
