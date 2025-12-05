@@ -116,6 +116,8 @@ function ResultsDashboard({ results, onReset, onSave }) {
           copy={selectedCopy !== null ? results.copy_variations[selectedCopy] : null}
           image={selectedImage !== null ? results.image_prompts[selectedImage] : null}
           platform={results.brief.platform}
+          industry={results.brief.industry}
+          disclaimers={results.disclaimers}
           onSave={handleSave}
         />
       )}

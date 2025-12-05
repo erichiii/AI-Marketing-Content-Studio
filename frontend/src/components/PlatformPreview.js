@@ -4,10 +4,30 @@ import './PlatformPreview.css';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
-function PlatformPreview({ copy, image, platform, onSave }) {
+function PlatformPreview({ copy, image, platform, industry, disclaimers, onSave }) {
   const [generatingImage, setGeneratingImage] = useState(false);
   const [generatedImageUrl, setGeneratedImageUrl] = useState(null);
   const [lastGeneratedPrompt, setLastGeneratedPrompt] = useState(null);
+
+  // Define industry-specific disclaimers
+  const getIndustryDisclaimer = () => {
+    if (!industry) return null;
+    
+    const disclaimerMap = {
+      'Healthcare': 'This content is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional. Requires compliance review before publishing.',
+      'Finance': 'This content is for informational purposes only and does not constitute financial advice. Past performance does not guarantee future results. Consult a licensed financial advisor. Requires compliance review before publishing.',
+      'E-commerce': 'Results may vary. Offers subject to availability and terms. Always read product details carefully.',
+      'SaaS': 'Results shown are illustrative examples. Individual results may vary based on usage and implementation.',
+      'Education': 'Results may vary based on individual circumstances and effort. No guaranteed outcomes.'
+    };
+    
+    return disclaimerMap[industry];
+  };
+  
+  // Check if industry requires compliance review
+  const requiresComplianceReview = () => {
+    return ['Healthcare', 'Finance'].includes(industry);
+  };
 
   useEffect(() => {
     // Auto-generate image when a new image is selected and it doesn't have an image_url
@@ -137,22 +157,45 @@ function PlatformPreview({ copy, image, platform, onSave }) {
           </div>
         </div>
 
-        {copy && copy.performance_analysis && (
+        {copy && (copy.performance_analysis || getIndustryDisclaimer() || requiresComplianceReview()) && (
           <div className="preview-insights">
-            <h4>Performance Insights</h4>
-            <div className="insight-item">
-              <span className="insight-label">Assessment:</span>
-              <span className={`insight-value ${copy.performance_analysis.label.toLowerCase().replace(/\s+/g, '-')}`}>
-                {copy.performance_analysis.label}
-              </span>
-            </div>
-            <div className="insight-item">
-              <span className="insight-label">Details:</span>
-              <span className="insight-value">{copy.performance_analysis.details}</span>
-            </div>
-            {copy.performance_analysis.requires_review && (
+            {copy.performance_analysis && (
+              <>
+                <h4>Performance Insights</h4>
+                <div className="insight-item">
+                  <span className="insight-label">Assessment:</span>
+                  <span className={`insight-value ${copy.performance_analysis.label.toLowerCase().replace(/\s+/g, '-')}`}>
+                    {copy.performance_analysis.label}
+                  </span>
+                </div>
+                <div className="insight-item">
+                  <span className="insight-label">Details:</span>
+                  <span className="insight-value">{copy.performance_analysis.details}</span>
+                </div>
+              </>
+            )}
+            {getIndustryDisclaimer() && (
+              <div className="insights-disclaimer">
+                <strong>Important Disclaimer:</strong> {getIndustryDisclaimer()}
+              </div>
+            )}
+            {((copy.performance_analysis && copy.performance_analysis.requires_review) || requiresComplianceReview()) && (
               <div className="review-warning">
-                ⚠️ Compliance review recommended before publishing
+                ⚠️ Compliance review required before publishing - This content must be reviewed by your legal/compliance team
+              </div>
+            )}
+          </div>
+        )}
+        {!copy && image && (
+          <div className="preview-insights">
+            {requiresComplianceReview() && (
+              <div className="review-warning">
+                ⚠️ Compliance review required before publishing - This content must be reviewed by your legal/compliance team
+              </div>
+            )}
+            {getIndustryDisclaimer() && (
+              <div className="insights-disclaimer">
+                <strong>Important Disclaimer:</strong> {getIndustryDisclaimer()}
               </div>
             )}
           </div>
