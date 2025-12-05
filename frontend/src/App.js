@@ -57,6 +57,7 @@ function App() {
   const handleReset = () => {
     setResults(null);
     setError(null);
+    setShowSavedCampaigns(false);
   };
 
   return (

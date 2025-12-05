@@ -113,19 +113,19 @@ body.dark-mode .prompt-text {
 }
 
 .element-tag {
-  background-color: #ccfbf1;
-  color: #115e59;
+  background-color: #dbeafe;
+  color: #1e40af;
   padding: 0.4rem 0.8rem;
   border-radius: 16px;
   font-size: 0.8rem;
   font-weight: 600;
-  border: 1px solid #5eead4;
+  border: 1px solid #93c5fd;
 }
 
 body.dark-mode .element-tag {
-  background-color: #134e4a;
-  color: #99f6e4;
-  border-color: #0f766e;
+  background-color: #1e3a8a;
+  color: #bfdbfe;
+  border-color: #3b82f6;
 }
 
 .copy-button {
