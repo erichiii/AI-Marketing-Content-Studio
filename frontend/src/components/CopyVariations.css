@@ -1,0 +1,144 @@
+.copy-variations h3 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.section-description {
+  color: #718096;
+  margin-bottom: 1.5rem;
+}
+
+.variations-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.variation-card {
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.variation-card:hover {
+  border-color: #667eea;
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.2);
+}
+
+.variation-card.selected {
+  border-color: #667eea;
+  background-color: #f7fafc;
+}
+
+.variation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.variation-number {
+  font-weight: 700;
+  color: #667eea;
+  font-size: 1.1rem;
+}
+
+.risk-badge {
+  padding: 0.3rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.risk-badge.safe {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.risk-badge.risky {
+  background-color: #fed7d7;
+  color: #742a2a;
+}
+
+.risk-badge.medium {
+  background-color: #feebc8;
+  color: #7c2d12;
+}
+
+.variation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.copy-field label {
+  display: block;
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.copy-field p {
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.copy-field .headline {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #1a202c;
+}
+
+.copy-field .cta {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.copy-field .notes {
+  font-style: italic;
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+.performance-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background-color: #edf2f7;
+  border-radius: 6px;
+  margin-top: 0.5rem;
+}
+
+.performance-details small {
+  color: #4a5568;
+  font-size: 0.85rem;
+}
+
+.review-required {
+  color: #c53030 !important;
+  font-weight: 600;
+}
+
+.copy-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #667eea;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.copy-button:hover {
+  background-color: #5568d3;
+}

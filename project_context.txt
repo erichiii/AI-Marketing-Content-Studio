@@ -1,0 +1,96 @@
+Mission Brief
+Your mission, should you choose to accept it, is to build an AI-powered marketing content studio that turns a single campaign brief into on-brand, platform-ready assets (copy + visuals).
+
+The tool must work across multiple industries while handling sensitive categories (like healthcare or finance) with extra care around tone, realism of claims, and disclaimers. Marketers should be able to go from a short brief to channel-optimized creatives they can ship or refine immediately. 
+
+Inputs
+Your tool must accept a campaign brief that includes at minimum:
+
+Industry / Content Category
+e.g. Healthcare, E-commerce, SaaS, Education, Finance, etc.
+Platform Target
+e.g. Meta, Instagram, Google Ads, TikTok, Email, LinkedIn, etc.
+Campaign Objective
+Awareness / Consideration / Conversion (or similar funnel stage)
+Target Audience
+Age range, gender (if relevant), basic interests or segment description
+Key Message / Angle
+The core promise, hook, or idea the campaign should focus on
+
+Core Logic
+Use LLM APIs for text generation and either:
+Image generation APIs, or
+Concrete, high-quality image prompts designers could use directly.
+Adapt tone and style to the selected industry:
+Healthcare / finance / other regulated spaces:
+Professional, empowering, stigma-aware, cautious on claims.
+Other verticals:
+Align with typical brand norms (e.g. bolder, more playful for e-com).
+Enforce platform-specific constraints, such as:
+Character limits and structure (headline, body, CTA)
+Typical aspect ratios / formats (e.g. 1:1, 9:16, 16:9)
+When disclaimers or careful phrasing are recommended(especially for healthcare, finance, or outcomes-based claims).
+
+Output Requirements
+Your app must present a marketer-facing dashboard that includes:
+
+Copy Variations
+3–5 options per request (headlines, primary text, CTA)
+Tuned to the selected platform and industry.
+
+Image Suggestions / Generations
+3–5 image outputs or detailed prompts
+With suitable dimensions/aspect ratios for the chosen platform.
+
+Automatic Disclaimers / Notes (Where Relevant)
+Especially for sensitive categories like healthcare or finance
+e.g. “Consult a professional”, “Results may vary”, “Not financial advice”.
+
+Basic “Performance Potential” Indicator
+A simple heuristic label or score such as:
+“Safe & Clear”
+“Aggressive / Risky”
+“Low Clarity”
+Based on clarity of value prop, hook strength, and potential compliance risk.
+To Solve This Bounty (Minimum Requirements)
+A submission counts as solved if you deliver:
+
+A working interface that:
+Accepts the required campaign brief inputs, including industry/category.
+Generates multiple copy variations for at least two different industries,
+one of which must be healthcare.
+Produces either:
+Real images via an API, or
+Concrete, ready-to-use image prompts with suggested formats.
+Clearly surfaces where disclaimers or cautionary notes should appear
+for sensitive categories.
+At least two end-to-end demo scenarios, for example:
+A healthcare campaign for one platform (e.g. Meta or Google Ads)
+A non-healthcare campaign (e.g. e-commerce or SaaS) for another platform(e.g. TikTok, Instagram, Email, or LinkedIn).
+Bonus Points
+Reusable prompt templates with variable injection:
+Industry, platform, tone, objective, audience, and message.
+A simple content library to:
+Save, tag, search, and re-use generated creatives.
+Platform preview modes, such as:
+Basic mock ad cards or “feed” previews (e.g. Instagram post, Meta ad unit).
+Light image post-processing helpers:
+Resize/crop suggestions, logo placement hints, brand color overlays.
+A lightweight content calendar view that:
+Groups campaigns and suggests posting slots (e.g. “M/W/F”, “launch week”).
+Optional “risk lens” toggle:
+Stricter mode for regulated industries vs. more experimental mode for others.
+
+Additional Details
+Focus on UX for marketers:
+One clear input flow → one clear results view → easy export or copy.
+Cross-industry design:
+Make it obvious how the same tool can support very different brands.
+24-hour feasibility:
+Start with a simple form + LLM calls + static previews.
+Treat image generation/prompts and disclaimer logic as modular components
+you can expand later.
+Even a “v1” that nails:
+Two industries, two platforms, structured outputs,
+And obvious disclaimer handling
+is already a strong and production-minded demo.
