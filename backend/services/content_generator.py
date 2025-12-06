@@ -25,7 +25,10 @@ class ContentGenerator:
             return content.get('variations', [])
         
         except Exception as e:
-            print(f"Error generating copy: {e}")
+            error_msg = f"Error generating copy: {e}"
+            print(error_msg)
+            with open('error_log.txt', 'a') as f:
+                f.write(f"{error_msg}\n")
             return []
     
     def generate_image_prompts(self, brief):
@@ -47,7 +50,10 @@ class ContentGenerator:
             return content.get('image_prompts', [])
         
         except Exception as e:
-            print(f"Error generating image prompts: {e}")
+            error_msg = f"Error generating image prompts: {e}"
+            print(error_msg)
+            with open('error_log.txt', 'a') as f:
+                f.write(f"{error_msg}\n")
             return []
     
     def generate_image(self, prompt_text, size="1024x1024"):
